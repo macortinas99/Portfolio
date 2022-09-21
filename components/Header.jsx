@@ -4,12 +4,12 @@ import Image from 'next/image'
 
 const Header = () => {
   let showHamburger = false
-  if (screen.width < 560) {
-    showHamburger = true
-  }
-  if (screen.width < 560) {
-    showHamburger = false
-  }
+  // if (screen.width < 560) {
+  //   showHamburger = true
+  // }
+  // if (screen.width < 560) {
+  //   showHamburger = false
+  // }
   return (
     <div className='font-barcode text-4xl absolute z-10 top-0 lg:w-screen '>
       <div className='flex text-gold justify-between'>

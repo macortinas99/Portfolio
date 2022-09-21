@@ -3,7 +3,6 @@ import { loadSlim } from 'tsparticles-slim'
 import { loadFull } from 'tsparticles'
 import { useMemo } from 'react'
 import { useCallback } from 'react'
-require('pathseg')
 
 const ParticlesComponent = () => {
   const options = useMemo(() => {
