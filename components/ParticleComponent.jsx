@@ -8,26 +8,26 @@ const ParticlesComponent = () => {
   const options = useMemo(() => {
     return {
       fpsLimit: 60,
-      interactivity: {
-        detectsOn: 'canvas',
-        events: {
-          onHover: {
-            enable: true,
-            mode: 'bubble',
-          },
-          resize: true,
-        },
-        modes: {
-          bubble: {
-            color: '#4FBDBA',
-            distance: 200,
-            duration: 2,
-            opacity: 1,
-            size: 5,
-            speed: 1,
-          },
-        },
-      },
+      // interactivity: {
+      //   detectsOn: 'canvas',
+      //   events: {
+      //     onHover: {
+      //       enable: true,
+      //       mode: 'bubble',
+      //     },
+      //     resize: true,
+      //   },
+      //   modes: {
+      //     bubble: {
+      //       color: '#4FBDBA',
+      //       distance: 200,
+      //       duration: 2,
+      //       opacity: 1,
+      //       size: 5,
+      //       speed: 1,
+      //     },
+      //   },
+      // },
       particles: {
         color: {
           value: '#fca311',
@@ -81,10 +81,6 @@ const ParticlesComponent = () => {
         size: {
           value: 1,
         },
-        fullScreen: {
-          zIndex: -1,
-          enable: false,
-        },
       },
     }
   }, [])
@@ -94,7 +90,11 @@ const ParticlesComponent = () => {
     loadFull(engine)
   }, [])
 
-  return <Particles init={particlesInit} options={options} />
+  return (
+    // <div className='tsparticles'>
+    <Particles init={particlesInit} options={options} width='100px' height='500px' />
+    // </div>
+  )
 }
 
 export default ParticlesComponent

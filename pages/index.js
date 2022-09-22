@@ -85,7 +85,6 @@ export default function Home() {
         <link rel='shortcut icon' href='/Suit_profile.jpg'></link>
       </Head>
       <Header />
-      <ParticlesComponent />
 
       <div className='xs:w-96 sm:w-96 md:w-96 lg:w-1/3 mt-64 xs:mx-28 sm:mx-auto mx-auto'>
         <div className='flex-col '>
@@ -118,6 +117,8 @@ export default function Home() {
 
       <ContactMe />
       <Footer />
+
+      <ParticlesComponent />
     </div>
   )
 }
