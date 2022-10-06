@@ -20,7 +20,7 @@ const ContactMe = () => {
 
   return (
     <div className='mb-12 z-2'>
-      <h1 className='xs:text-6xl lg:text-7xl xs:mt-24 lg:mt-36 flex xs:w-4/5 xs:ml-35% xs:mb-16 lg:mb-24 lg:justify-center text-teal font-barcode'>
+      <h1 className='xs:text-6xl lg:text-7xl xs:mt-24 lg:mt-36 flex xs:w-4/5 xs:ml-35% xs:mb-16 lg:mb-24 lg:justify-center text-gold font-barcode'>
         Contact Me
       </h1>
 

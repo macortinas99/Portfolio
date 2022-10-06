@@ -102,7 +102,7 @@ export default function Home() {
       </div>
       <p
         id='projects-title'
-        className='projects-title xs:text-6xl lg:text-7xl text-teal font-barcode mt-96 mb-24 xs:mx-45% flex lg:justify-center opacity-0'
+        className='projects-title xs:text-6xl lg:text-7xl text-gold font-barcode mt-96 mb-24 xs:mx-45% flex lg:justify-center opacity-0'
       >
         Projects
       </p>
