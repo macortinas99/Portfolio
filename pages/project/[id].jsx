@@ -1,18 +1,18 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React from 'react'
+import { useContext } from 'react'
 // import { useContext } from 'react'
 import Header from '../../components/Header'
-import { useStateContext } from '../../context/StateContext'
+import StateContext, { useStateContext } from '../../context/StateContext'
 
 export default function ProjectDetails() {
   const router = useRouter()
-  const id = router.query.id
+  const ID = router.query.id
   console.log('hello')
 
-  const { projects } = useStateContext()
-  let project = projects[id]
-
+  const { projects } = useContext(StateContext)
+  let project = projects[ID]
   console.log(project)
 
   return (

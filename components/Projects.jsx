@@ -5,7 +5,7 @@ import Github from '../assets/img/Github.svg'
 import Website from '../assets/img/WebsiteIcon.png'
 
 const ProjectCards = ({ projects }) => {
-  console.log(projects)
+  // console.log(projects)
   return (
     <div className='z-10 lg:grid xs:grid-cols-1 lg:grid-cols-2'>
       {Object.values(projects).map(project => {
