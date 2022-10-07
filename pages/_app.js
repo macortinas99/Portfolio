@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import { Context } from '../context/StateContext'
+import { Context } from '../context/StateContext'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -32,9 +32,9 @@ function MyApp({ Component, pageProps }) {
     },
   })
   return (
-    // <Context.Provider value={{ projects, setProjects }}>
-    <Component {...pageProps} />
-    // </Context.Provider>
+    <Context.Provider value={{ projects, setProjects }}>
+      <Component {...pageProps} />
+    </Context.Provider>
   )
 }
 

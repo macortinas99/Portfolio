@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/Link'
+
+import Link from 'next/link'
 import Github from '../assets/img/Github.svg'
 import Website from '../assets/img/WebsiteIcon.png'
 
