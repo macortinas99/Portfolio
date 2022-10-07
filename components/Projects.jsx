@@ -20,7 +20,6 @@ const ProjectCards = ({ projects }) => {
                 </div>
                 <div className='project-card-cover'></div>
               </div>
-
               <p className='font-code text-gold text-2xl w-48'>{project.title}</p>
               <p className='absolute z-10 text-xl text-lightBlack bg-gold lg:w-96 xs:mt-6 lg:mt-12 ml-4 p-3 rounded-md'>{project.description}</p>
 
