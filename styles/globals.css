@@ -86,6 +86,31 @@ html {
     height: 30px;
     width: 30px;
 }
+.gold-glow {
+    -webkit-box-shadow:0px 0px 75px 20px rgba(252,162,17,0.61);
+-moz-box-shadow: 0px 0px 75px 20px rgba(252,162,17,0.61);
+box-shadow: 0px 0px 75px 20px rgba(252,162,17,0.61);
+}
+
+.slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+}
+.slider-image {
+    /* width: 100%; */
+    /* height: 500px; */
+    background-size:auto;
+}
+.slide {
+    /* width: 400px !important; */
+    background-size: auto;
+}
+
 
 
 @media only screen and (max-width: 575px){
