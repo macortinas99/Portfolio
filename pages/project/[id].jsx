@@ -34,17 +34,16 @@ export default function ProjectDetails() {
       <div className='flex mx-auto lg:mt-48 lg:w-50% bg-lightBlack rounded-lg p-12 gold-glow'>
         <div className='lg:w-60% mr-6 '>
           <p className='lg:text-4xl font-code underline underline-offset-8	 lg:mb-6 text-gold'>{title}</p>
-          <div className=''>
+          <div className='border-2 border-gold rounded-lg'>
             <Slide>
               {image?.map((image, index) => (
                 <div className='slide' key={index}>
-                  <div className='' style={{ backgroundImage: `url(${image.url})`, height: '300px' }}>
-                    <span>{image.caption}</span>
-                  </div>
+                  <div className='rounded-lg bg-cover' style={{ backgroundImage: `url(${image})`, height: '300px' }}></div>
                 </div>
               ))}
             </Slide>
           </div>
+          <p className='text-gold underline underline-offset-2'>Description:</p>
           <p className='text-gray'>{description}</p>
           <p>VIDEO Overlay</p>
         </div>
