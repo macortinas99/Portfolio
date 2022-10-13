@@ -31,40 +31,42 @@ export default function ProjectDetails() {
   return (
     <div>
       <Header />
-      <div className='flex mx-auto lg:mt-48 lg:w-50% bg-lightBlack rounded-lg p-12 gold-glow'>
-        <div className='lg:w-60% mr-6 '>
-          <p className='lg:text-4xl font-code underline underline-offset-8	 lg:mb-6 text-gold'>{title}</p>
-          <div className='border-2 border-gold rounded-lg'>
-            <Slide>
-              {image?.map((image, index) => (
-                <div className='slide' key={index}>
-                  <div className='rounded-lg bg-cover' style={{ backgroundImage: `url(${image})`, height: '300px' }}></div>
-                </div>
-              ))}
-            </Slide>
-          </div>
-          <p className='text-gold underline underline-offset-2'>Description:</p>
-          <p className='text-gray'>{description}</p>
-          <p>VIDEO Overlay</p>
-        </div>
-        <div className=' lg:w-30% h-450 pl-6 border-l-2 border-amber-900'>
-          <div>
-            <p className='text-gold text-xl underline underline-offset-2'>Skills Used</p>
-
-            <div className='text-gray font-code'>
-              <li>Deskilling</li>
-
-              <li>DISCO - European Dictionary of Skills and Competences</li>
-
-              <li>Dreyfus model of skill acquisition</li>
-
-              <li>Forecast skill</li>
-
-              <li>Game of skill</li>
+      <div className='mx-auto lg:mt-48 lg:w-50% bg-lightBlack rounded-lg p-12 gold-glow font-code'>
+        <div className='flex '>
+          <div className='lg:w-60% mr-6 '>
+            <p className='lg:text-4xl font-code underline underline-offset-8	 lg:mb-6 text-gold'>{title}</p>
+            <div className='border-2 border-gold rounded-lg'>
+              <Slide>
+                {image?.map((image, index) => (
+                  <div className='slide' key={index}>
+                    <div className='rounded-lg bg-cover' style={{ backgroundImage: `url(${image})`, height: '300px' }}></div>
+                  </div>
+                ))}
+              </Slide>
             </div>
+            <p className='text-gold text-xl font-code underline underline-offset-2'>Description:</p>
+            <p className='text-gray'>{description}</p>
           </div>
-          <div className='text-gold text-xl underline underline-offset-2'>Key Take aways</div>
+          <div className=' lg:w-30% h-450 pl-6 border-l-2 border-amber-900'>
+            <div>
+              <p className='text-gold text-xl underline underline-offset-2'>Skills Used</p>
+
+              <div className='text-gray font-code'>
+                <li>Deskilling</li>
+
+                <li>DISCO - European Dictionary of Skills and Competences</li>
+
+                <li>Dreyfus model of skill acquisition</li>
+
+                <li>Forecast skill</li>
+
+                <li>Game of skill</li>
+              </div>
+            </div>
+            <div className='text-gold text-xl underline underline-offset-2'>Key Take aways</div>
+          </div>
         </div>
+        <video className='w-100% mt-12 mx-auto max-w-none ' src='/EcommerceVideo.mp4' type='video/mp4' muted autoPlay loop></video>
       </div>
     </div>
   )

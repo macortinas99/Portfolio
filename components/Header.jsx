@@ -11,11 +11,11 @@ const Header = () => {
   //   showHamburger = false
   // }
   return (
-    <div className='font-barcode text-4xl absolute z-10 top-0 lg:w-screen '>
-      <div className='flex text-gold justify-between'>
+    <div className='font-barcode text-4xl absolute z-10 top-0 w-screen '>
+      <div className='flex text-gold '>
         <p className='font-logo mt-5 ml-5 animate-pulse'>MAC</p>
         {/* {showHamburger && ( */}
-        <div className='flex lg:mr-10 mt-6 space-x-5 xs:opacity-0'>
+        <div className='flex absolute right-6 lg:mr-10 mt-6 space-x-5 xs:opacity-0'>
           <Link href='/'>
             <div className='barcode-scanner'>
               <div className='scanner'></div>

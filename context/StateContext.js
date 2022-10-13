@@ -16,7 +16,7 @@ export const StateContextProvider = ({ children }) => {
     title: 'Recipe Website',
     description:
       'Recipe app that provides random recipes, filtering by category, and searching capabilities. Data is retrieved via API request and client rendered using React.js.',
-    image: [{ url: '/E-commerce-sample.png', caption: 'hi test' }],
+    image: ['/E-commerce-sample.png'],
     github: 'https://github.com/macortinas99/React_Recipe_app',
     website: 'https://macortinas99.github.io/React_Recipe_app/',
     id: 2,
