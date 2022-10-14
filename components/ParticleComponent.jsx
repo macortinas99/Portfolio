@@ -59,11 +59,11 @@ const ParticlesComponent = () => {
         },
         number: {
           density: {
-            enable: false,
-            area: 2000,
+            enable: true,
+            area: 1000,
           },
           limit: 0,
-          // value: 4000,
+          // value: 8000,
         },
         opacity: {
           animation: {
@@ -84,7 +84,6 @@ const ParticlesComponent = () => {
       },
     }
   }, [])
-
   const particlesInit = useCallback(engine => {
     // loadSlim(engine)
     loadFull(engine)

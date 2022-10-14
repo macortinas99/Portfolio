@@ -11,7 +11,6 @@ import Footer from '../../components/Footer'
 export default function ProjectDetails() {
   const router = useRouter()
   const ID = router.query.id
-  console.log('hello')
   let projectNum = 'project' + [ID]
 
   const { project1, project2, project3 } = useContext(StateContext)
@@ -27,7 +26,6 @@ export default function ProjectDetails() {
   }
 
   const { title, description, image, website, github, id } = projectNum
-  console.log(image)
 
   return (
     <div>

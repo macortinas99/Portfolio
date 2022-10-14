@@ -57,7 +57,6 @@ export default function Home() {
   //   //   id: 5,
   //   // },
   // }
-
   const scrollEffect = () => {
     if (window.scrollY <= 500) {
       document.getElementById('projects').style.opacity = '0'
@@ -120,6 +119,7 @@ export default function Home() {
       <ContactMe />
       <Footer />
 
+      {/* {global.innerWidth > 600 && } */}
       <ParticlesComponent />
     </div>
   )

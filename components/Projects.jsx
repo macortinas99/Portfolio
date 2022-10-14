@@ -37,6 +37,7 @@ const ProjectCards = ({ projects }) => {
           </Link>
         )
       })}
+      <div className='text-white text-7xl'>work on github/website link on home page for each project</div>
     </div>
   )
 }
