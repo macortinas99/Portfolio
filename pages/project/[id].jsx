@@ -6,6 +6,7 @@ import StateContext from '../../context/StateContext'
 // Image slider
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
+import Footer from '../../components/Footer'
 
 export default function ProjectDetails() {
   const router = useRouter()
@@ -31,10 +32,10 @@ export default function ProjectDetails() {
   return (
     <div>
       <Header />
-      <div className='mx-auto lg:mt-48 lg:w-50% bg-lightBlack rounded-lg p-12 gold-glow font-code'>
+      <div className='mx-auto mb-20 lg:mt-48 lg:w-50% bg-lightBlack rounded-lg p-16 gold-glow font-code'>
         <div className='flex '>
           <div className='lg:w-60% mr-6 '>
-            <p className='lg:text-4xl font-code underline underline-offset-8	 lg:mb-6 text-gold'>{title}</p>
+            <p className='lg:text-4xl font-code lg:mb-6 text-gold'>{title}</p>
             <div className='border-2 border-gold rounded-lg'>
               <Slide>
                 {image?.map((image, index) => (
@@ -44,7 +45,7 @@ export default function ProjectDetails() {
                 ))}
               </Slide>
             </div>
-            <p className='text-gold text-xl font-code underline underline-offset-2'>Description:</p>
+            <p className='text-gold mt-2 text-xl font-code underline underline-offset-2'>Description:</p>
             <p className='text-gray'>{description}</p>
           </div>
           <div className=' lg:w-30% h-450 pl-6 border-l-2 border-amber-900'>
@@ -68,6 +69,7 @@ export default function ProjectDetails() {
         </div>
         <video className='w-100% mt-12 mx-auto max-w-none ' src='/EcommerceVideo.mp4' type='video/mp4' muted autoPlay loop></video>
       </div>
+      <Footer />
     </div>
   )
 }

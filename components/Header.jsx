@@ -11,7 +11,7 @@ const Header = () => {
   //   showHamburger = false
   // }
   return (
-    <div className='font-barcode text-4xl absolute z-10 top-0 w-screen '>
+    <div className='font-barcode sm:text-3xl text-4xl absolute z-10 top-0 w-screen '>
       <div className='flex text-gold '>
         <p className='font-logo mt-5 ml-5 animate-pulse'>MAC</p>
         {/* {showHamburger && ( */}

@@ -89,25 +89,27 @@ export default function Home() {
       </Head>
       <Header />
 
-      <div className='xs:w-96 sm:w-96 md:w-96 lg:w-1/3 mt-64 xs:mx-28 sm:mx-auto mx-auto'>
+      <div className='xs:w-80% sm:w-60% md:w-50% lg:w-40% xs:mt-32 mt-64 xs:mx-auto sm:mx-auto mx-auto'>
         <div className='flex-col '>
           <p className='text-gray font-code'>Hi, my name is</p>
 
-          <p className='text-gold shadow-border animate-pulse shadow-gold rounded-lg text-4xl font-logo mt-5 p-3 pl-14 '>Matthew Cortinas.</p>
+          <p className='text-gold shadow-border animate-pulse shadow-gold rounded-lg xs:text-2xl text-4xl font-logo mt-5 p-3 pl-14 '>
+            Matthew Cortinas.
+          </p>
           <p className='mt-3 text-gold text-3xl'>I am a Front-end Web Developer.</p>
-          <p className='text-gray font-code mt-5 w-4/5'>
+          <p className='text-gray font-code mt-5 xs:w-100% w-4/5'>
             My expertise is in <span className='text-teal italic'>React.js</span> and <span className='text-teal italic'>Next.js</span>. My current
-            position is Senior Frontend Developer at <span className='text-teal italic'>Seminaut Inc.</span> I specialize in creating{' '}
-            <span className='text-teal italic'>live</span> interactive maps and components for the live map page. My main responsibilities include
-            adding new features to the map page, <span className='text-teal italic'>leading</span> a team of 6 interns, weekly merge request
-            approvals, weekly meetings with the executive team, etc. I am looking forward to showing you these features when they are released to the
-            public.
+            position is <span className='text-teal italic'>Senior</span> Frontend Developer at <span className='text-teal italic'>Seminaut Inc.</span>{' '}
+            I specialize in creating <span className='text-teal italic'>live</span> interactive maps and components for the live map page. My main
+            responsibilities include adding new features to the map page, <span className='text-teal italic'>leading</span> a team of 6 interns,
+            weekly merge request approvals, weekly meetings with the executive team, etc. I am looking forward to showing you these features when they
+            are released to the public.
           </p>
         </div>
       </div>
       <p
         id='projects-title'
-        className='projects-title xs:text-6xl md:text-6xl lg:text-7xl text-gold font-barcode mt-96 mb-24 xs:mx-45% flex md: justify-center lg:justify-center opacity-0'
+        className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-96 mb-24 xs:mx-45% flex md: justify-center lg:justify-center opacity-0'
       >
         Projects
       </p>

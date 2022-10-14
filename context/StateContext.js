@@ -22,7 +22,7 @@ export const StateContextProvider = ({ children }) => {
     id: 2,
   })
   const [project3, setProject3] = useState({
-    title: 'Recipe Website',
+    title: 'Long Project Title Example ... hilksdf ',
     description: 'Using ',
     image: '/E-commerce-sample.png',
     github: 'https://github.com/macortinas99/ecommerce_sanity_stripe_template',
