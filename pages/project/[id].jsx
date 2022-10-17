@@ -62,7 +62,6 @@ export default function ProjectDetails() {
                 <li>Game of skill</li>
               </div>
             </div>
-            <div className='text-gold text-xl underline underline-offset-2'>Key Take aways</div>
           </div>
         </div>
         <video className='w-100% mt-12 mx-auto max-w-none ' src='/EcommerceVideo.mp4' type='video/mp4' muted autoPlay loop></video>
