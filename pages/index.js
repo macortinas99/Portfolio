@@ -15,13 +15,26 @@ export default function Home() {
   const projects = { project1, project2, project3 }
 
   const scrollEffect = () => {
-    if (window.scrollY <= 500) {
+    // Screens larger than 600px wide
+    if (window.scrollY <= 500 && screen.width > 600) {
       document.getElementById('projects').style.opacity = '0'
       document.getElementById('projects').style.marginLeft = '-2200px'
       document.getElementById('projects-title').style.opacity = '0'
     }
 
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= 500 && screen.width > 600) {
+      document.getElementById('projects').style.opacity = '1'
+      document.getElementById('projects').style.marginLeft = '0px'
+      document.getElementById('projects-title').style.opacity = '1'
+    }
+    // Screens smaller than 600px wide
+    if (window.scrollY <= 500 && screen.width < 600) {
+      document.getElementById('projects').style.opacity = '0'
+      document.getElementById('projects').style.marginLeft = '-100px'
+      document.getElementById('projects-title').style.opacity = '0'
+    }
+
+    if (window.scrollY >= 500 && screen.width < 600) {
       document.getElementById('projects').style.opacity = '1'
       document.getElementById('projects').style.marginLeft = '0px'
       document.getElementById('projects-title').style.opacity = '1'
@@ -65,7 +78,7 @@ export default function Home() {
       </div>
       <p
         id='projects-title'
-        className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-96 mb-24 xs:mx-45% flex md: justify-center lg:justify-center opacity-0'
+        className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-96 mb-24 flex justify-center opacity-0'
       >
         Projects
       </p>
