@@ -44,7 +44,7 @@ html {
   }
 
 .projects {
-    transition: all 2s ease;
+    transition: all 1.5s ease;
 }
 
 .projects-title {
@@ -52,14 +52,10 @@ html {
 }
 .project-card-image {
    background-size: contain;
-   opacity: 0.8;
    position: absolute;
    z-index: 1;
    width: 25%;
-   /* height: 300px; */
    margin: 50px 0 0 12%;
-   opacity: 0.6; 
-
 }
 
 .project-card-cover {
@@ -145,8 +141,8 @@ box-shadow: 0px 0px 75px 20px rgba(252,162,17,0.61);
 /* Phone view */
 @media only screen and (max-width: 575px){
     .project-card-image {
-        width: 70%;
-        margin: 70px 0 0 5%;
+        width: 60%;
+        margin: 70px 0 0 10%;
         
     }
     .project-card-cover {
