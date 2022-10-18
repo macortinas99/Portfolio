@@ -8,9 +8,11 @@ export const StateContextProvider = ({ children }) => {
     description:
       'E-commerce store created with Next.js and Sanity database. Stripe integration is also used to allow for online payments. Shopping cart keeps track of items. Product details page also shows featured products.',
     image: ['/Ecommerce-test2.png', '/Ecommerce-test3.png', '/Ecommerce-test4.png'],
+    video: '/EcommerceVideo.mp4',
     github: 'https://github.com/macortinas99/ecommerce_sanity_stripe_template',
     website: 'https://ecommerce-sanity-stripe-template.vercel.app/',
     id: 1,
+    skills: ['Next.js/React.js', 'Sanity Database', 'Stripe payment integration', 'Shopping Cart Functionality', 'Full Stack Website'],
   })
   const [project2, setProject2] = useState({
     title: 'Recipe Website',

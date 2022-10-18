@@ -26,12 +26,16 @@ const ProjectCards = ({ projects }) => {
                 </p>
 
                 <Link href={project.github}>
-                  <Image src={Github} alt='' width={30} height={30} className='' />
+                  <a target='_blank'>
+                    <Image src={Github} alt='' width={30} height={30} />
+                  </a>
                 </Link>
 
                 {project.website && (
                   <Link href={project.website}>
-                    <Image src={Website} alt='' width={30} height={30} />
+                    <a target='_blank'>
+                      <Image src={Website} alt='' width={30} height={30} />
+                    </a>
                   </Link>
                 )}
               </div>
