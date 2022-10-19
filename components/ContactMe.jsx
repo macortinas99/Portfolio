@@ -28,7 +28,7 @@ const ContactMe = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className='bg-lightBlack text-teal font-code lg:text-xl xs:w-90% sm:w-70% md:w-50% lg:w-1/2 border-2 border-gold rounded-xl xs:h-500 sm:h-450 md:h-450 lg:h-500 flex lg:justify-center '
+          className='bg-lightBlack z-10 text-teal font-code lg:text-xl xs:w-90% sm:w-70% md:w-50% lg:w-1/2 border-2 border-gold rounded-xl xs:h-500 sm:h-450 md:h-450 lg:h-500 flex lg:justify-center '
         >
           <div className='flex-col sm:w-80% md:w-80% sm:mx-auto md:mx-auto'>
             <div className='my-6 xs:ml-3'>

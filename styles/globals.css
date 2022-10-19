@@ -103,6 +103,8 @@ box-shadow: 0px 0px 75px 20px rgba(252,162,17,0.61);
 .slide {
     width: 100% !important;
 }
+
+
 /* Laptop view */
 @media only screen and (min-width: 900px) and (max-width: 1200px){
     .project-card-image {

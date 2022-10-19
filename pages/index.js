@@ -16,17 +16,31 @@ export default function Home() {
 
   const scrollEffect = () => {
     // Screens larger than 600px wide
+    // Projects Section
     if (window.scrollY <= 500 && screen.width > 600) {
       document.getElementById('projects').style.opacity = '0'
       document.getElementById('projects').style.marginLeft = '-2200px'
-      document.getElementById('projects-title').style.opacity = '0'
+      document.getElementById('my-work').style.opacity = '0'
     }
 
     if (window.scrollY >= 500 && screen.width > 600) {
       document.getElementById('projects').style.opacity = '1'
       document.getElementById('projects').style.marginLeft = '0px'
+      document.getElementById('my-work').style.opacity = '1'
+    }
+    // My Work Section
+    if (window.scrollY <= document.getElementById('my-work-container').offsetHeight + 600 && screen.width > 600) {
+      document.getElementById('projects').style.opacity = '0'
+      document.getElementById('projects').style.marginLeft = '-2200px'
+      document.getElementById('projects-title').style.opacity = '0'
+    }
+
+    if (window.scrollY >= document.getElementById('my-work-container').offsetHeight + 600 && screen.width > 600) {
+      document.getElementById('projects').style.opacity = '1'
+      document.getElementById('projects').style.marginLeft = '0px'
       document.getElementById('projects-title').style.opacity = '1'
     }
+
     // Screens smaller than 600px wide
     if (window.scrollY <= 500 && screen.width < 600) {
       document.getElementById('projects').style.opacity = '0'
@@ -76,20 +90,29 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <p
-        id='projects-title'
-        className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-96 mb-24 flex justify-center opacity-0'
-      >
-        Projects
-      </p>
-      <div id='projects' className='projects lg:w-screen xs:mx-auto opacity-0'>
-        <ProjectCards projects={projects} />
+
+      <div id='my-work-container'>
+        <p
+          id='my-work'
+          className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-96 mb-24 flex justify-center opacity-0'
+        >
+          My work
+        </p>
+      </div>
+      <div id='projects-container'>
+        <p
+          id='projects-title'
+          className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-56 mb-24 flex justify-center opacity-0'
+        >
+          Projects
+        </p>
+        <div id='projects' className='projects lg:w-screen xs:mx-auto opacity-0'>
+          <ProjectCards projects={projects} />
+        </div>
       </div>
 
       <ContactMe />
       <Footer />
-
-      {/* {global.innerWidth > 600 && } */}
       <ParticlesComponent />
     </div>
   )
