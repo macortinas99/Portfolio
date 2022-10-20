@@ -10,49 +10,66 @@ import ParticlesComponent from '../components/ParticleComponent'
 import Image from 'next/image'
 import StateContext from '../context/StateContext'
 
+// Guild Gaming Images
+import GuildGoldLogo from '../assets/img/GuildGaming/GuildGamingLogoGoldBg.png'
+
 export default function Home() {
   const { project1, project2, project3 } = useContext(StateContext)
   const projects = { project1, project2, project3 }
 
   const scrollEffect = () => {
-    // Screens larger than 600px wide
-    // Projects Section
+    // Screens larger than 600px wide*******************************
+    let projectsSection = document.getElementById('projects')
+    let projectTitle = document.getElementById('projects-title')
+    let seminautTitle = document.getElementById('seminaut-title')
+    let seminautContainer = document.getElementById('seminaut-container')
+
+    // Seminaut Section
     if (window.scrollY <= 500 && screen.width > 600) {
-      document.getElementById('projects').style.opacity = '0'
-      document.getElementById('projects').style.marginLeft = '-2200px'
-      document.getElementById('my-work').style.opacity = '0'
+      seminautTitle.style.opacity = '0'
     }
 
     if (window.scrollY >= 500 && screen.width > 600) {
-      document.getElementById('projects').style.opacity = '1'
-      document.getElementById('projects').style.marginLeft = '0px'
-      document.getElementById('my-work').style.opacity = '1'
+      seminautTitle.style.opacity = '1'
     }
-    // My Work Section
-    if (window.scrollY <= document.getElementById('my-work-container').offsetHeight + 600 && screen.width > 600) {
-      document.getElementById('projects').style.opacity = '0'
-      document.getElementById('projects').style.marginLeft = '-2200px'
-      document.getElementById('projects-title').style.opacity = '0'
+    // Projects Section
+    if (window.scrollY <= seminautContainer.offsetHeight + 600 && screen.width > 600) {
+      projectsSection.style.opacity = '0'
+      projectsSection.style.marginLeft = '-2200px'
+      projectTitle.style.opacity = '0'
     }
 
-    if (window.scrollY >= document.getElementById('my-work-container').offsetHeight + 600 && screen.width > 600) {
-      document.getElementById('projects').style.opacity = '1'
-      document.getElementById('projects').style.marginLeft = '0px'
-      document.getElementById('projects-title').style.opacity = '1'
+    if (window.scrollY >= seminautContainer.offsetHeight + 600 && screen.width > 600) {
+      projectsSection.style.opacity = '1'
+      projectsSection.style.marginLeft = '0px'
+      projectTitle.style.opacity = '1'
     }
 
-    // Screens smaller than 600px wide
+    // Screens smaller than 600px wide*******************************
+    // Seminaut section
     if (window.scrollY <= 500 && screen.width < 600) {
-      document.getElementById('projects').style.opacity = '0'
-      document.getElementById('projects').style.marginLeft = '-100px'
-      document.getElementById('projects-title').style.opacity = '0'
+      seminautTitle.style.opacity = '0'
     }
 
     if (window.scrollY >= 500 && screen.width < 600) {
-      document.getElementById('projects').style.opacity = '1'
-      document.getElementById('projects').style.marginLeft = '0px'
-      document.getElementById('projects-title').style.opacity = '1'
+      seminautTitle.style.opacity = '1'
     }
+
+    // Projects Section
+    if (window.scrollY <= seminautContainer.offsetHeight + 600 && screen.width < 600) {
+      projectsSection.style.opacity = '0'
+      projectsSection.style.marginLeft = '-2200px'
+      projectTitle.style.opacity = '0'
+    }
+
+    if (window.scrollY >= seminautContainer.offsetHeight + 600 && screen.width < 600) {
+      projectsSection.style.opacity = '1'
+      projectsSection.style.marginLeft = '0px'
+      projectTitle.style.opacity = '1'
+    }
+
+    // Guild Gaming section
+    // if(window.scrollY >=)
   }
 
   useEffect(() => {
@@ -61,7 +78,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <div id='body'>
       <Head>
         <meta charset='UTF-8' />
         <meta name='keywords' content='titla, meta, nextjs' />
@@ -91,18 +108,30 @@ export default function Home() {
         </div>
       </div>
 
-      <div id='my-work-container'>
-        <p
-          id='my-work'
-          className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-96 mb-24 flex justify-center opacity-0'
-        >
-          My work
-        </p>
+      <div id='seminaut-container'>
+        <div>
+          <p
+            id='seminaut-title'
+            className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-96 mb-24 flex justify-center opacity-0'
+          >
+            Seminaut Inc.
+          </p>
+          <Image src={GuildGoldLogo} alt='' id='Guild-logo-img' />
+        </div>
+        <div>
+          <div>
+            <p className='text-gold'>About</p>
+            <p className='text-gold'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda soluta placeat nisi labore fuga? Illum optio nihil, tempora esse
+              facilis autem maiores quidem perspiciatis laboriosam sapiente inventore non ea ipsum.
+            </p>
+          </div>
+        </div>
       </div>
       <div id='projects-container'>
         <p
           id='projects-title'
-          className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-56 mb-24 flex justify-center opacity-0'
+          className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-56 mb-20 flex justify-center opacity-0'
         >
           Projects
         </p>
