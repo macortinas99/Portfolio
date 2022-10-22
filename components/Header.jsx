@@ -19,22 +19,26 @@ const Header = () => {
     if (!isActive) {
       navbarContainer.style.left = '75px'
       navbarContainer.style.right = '0px'
+      navbarContainer.style.width = '100%'
+      navbarContainer.style.fontSize = '1.875rem'
     }
     if (isActive) {
       navbarContainer.style.left = '100%'
       navbarContainer.style.right = '-56px'
+      navbarContainer.style.width = '0px'
+      navbarContainer.style.fontSize = '0px'
     }
     setIsActive(!isActive)
   }
 
   return (
-    <div className='font-barcode sm:text-3xl text-4xl absolute z-10 top-0 w-screen '>
+    <div className='font-barcode xs:text-3xl sm:text-3xl text-4xl absolute z-10 top-0 w-screen '>
       <div className='flex text-gold '>
         <p className='font-logo mt-5 ml-5 animate-pulse'>MAC</p>
         {/* {showHamburger && ( */}
         <div
           id='navbar-container'
-          className='transition-all	flex absolute xs:-right-56 xs:left-screen right-6 lg:mr-10 xs:mt-0 mt-6 xs:space-x-0 space-x-5 xs:flex-col xs:bg-black xs:h-screen'
+          className='transition-all z-0	flex absolute xs:-right-56 xs:left-screen right-6 lg:mr-10 xs:mt-0 mt-6 xs:space-x-0 space-x-5 xs:flex-col xs:bg-black xs:h-screen'
         >
           <div className='xs:ml-6 xs:space-y-4 xs:mt-6'>
             <Link href='/'>
