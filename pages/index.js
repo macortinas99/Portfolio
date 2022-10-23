@@ -10,8 +10,7 @@ import ParticlesComponent from '../components/ParticleComponent'
 import Image from 'next/image'
 import StateContext from '../context/StateContext'
 
-// Guild Gaming Images
-import GuildGoldLogo from '../assets/img/GuildGaming/GuildGamingLogoGoldBg.png'
+import Seminaut from '../components/Seminaut'
 
 export default function Home() {
   const { project1, project2, project3 } = useContext(StateContext)
@@ -47,11 +46,11 @@ export default function Home() {
 
     // Screens smaller than 600px wide*******************************
     // Seminaut section
-    if (window.scrollY <= 500 && screen.width < 600) {
+    if (window.scrollY <= 200 && screen.width < 600) {
       seminautTitle.style.opacity = '0'
     }
 
-    if (window.scrollY >= 500 && screen.width < 600) {
+    if (window.scrollY >= 200 && screen.width < 600) {
       seminautTitle.style.opacity = '1'
     }
 
@@ -109,24 +108,7 @@ export default function Home() {
       </div>
 
       <div id='seminaut-container'>
-        <div>
-          <p
-            id='seminaut-title'
-            className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-96 mb-24 flex justify-center opacity-0'
-          >
-            Seminaut Inc.
-          </p>
-          <Image src={GuildGoldLogo} alt='' id='Guild-logo-img' />
-        </div>
-        <div>
-          <div>
-            <p className='text-gold'>About</p>
-            <p className='text-gold'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda soluta placeat nisi labore fuga? Illum optio nihil, tempora esse
-              facilis autem maiores quidem perspiciatis laboriosam sapiente inventore non ea ipsum.
-            </p>
-          </div>
-        </div>
+        <Seminaut />
       </div>
       <div id='projects-container'>
         <p
