@@ -88,6 +88,9 @@ module.exports = {
         '60%': '60%',
         '100%': '100%',
       },
+      fontSize: {
+        0: '0px',
+      },
       fontFamily: {
         barcode: ['"Libre Barcode 39 Text"', 'cursive'],
         code: ['"Source Code Pro"', 'monospace'],

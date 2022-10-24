@@ -24,7 +24,7 @@ const ContactMe = () => {
         Contact Me
       </h1>
 
-      <div className='flex justify-center xs:w-screen'>
+      <div className='flex justify-center z-10 absolute xs:w-screen'>
         <form
           ref={form}
           onSubmit={sendEmail}

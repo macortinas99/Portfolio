@@ -67,25 +67,25 @@ export default function Seminaut() {
                 <span className='text-teal xs:text-4xl'>01.</span>
                 <span className='text-gold xs:text-md xs:ml-2 xs:mb-4'>Auto populating live map with events and venues</span>
               </div>
-              <Image src={AutoFillImage} alt='' width={400} height={250} />
+              <Image src={AutoFillImage} alt='' width={400} height={250} className='z-10' />
 
               {/* Feature 2 */}
               <div className='flex font-code xs:mt-6 xs:w-90% mx-auto'>
                 <span className='text-teal xs:text-4xl'>02.</span>
                 <span className='text-gold xs:text-md xs:ml-2 xs:mb-4'>Side Panel feature allowing more friendly UX/UI experience</span>
               </div>
-              <Image src={SidePanelImage1} alt='' width={400} height={250} />
+              <Image src={SidePanelImage1} alt='' width={400} height={250} className='z-10' />
               <p className='text-gold font-code xs:w-90% mx-auto xs:mb-4'>
                 Venue Details Section within Side Panel where the user can find out more info about the venue while staying on the map page
               </p>
-              <Image src={SidePanelImage2} alt='' width={400} height={250} />
+              <Image src={SidePanelImage2} alt='' width={400} height={250} className='z-10' />
 
               {/* Feature 3 */}
               <div className='flex font-code xs:mt-6 xs:w-90% mx-auto'>
                 <span className='text-teal xs:text-4xl'>03.</span>
                 <span className='text-gold xs:text-md xs:ml-2 xs:mb-4'>Autocomplete search bar for location searching</span>
               </div>
-              <Image src={AutocompleteBar} alt='' width={400} height={300} />
+              <Image src={AutocompleteBar} alt='' width={400} height={300} className='z-10' />
             </div>
           </div>
         </div>
