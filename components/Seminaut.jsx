@@ -82,11 +82,11 @@ export default function Seminaut() {
                   </span>
                 </div>
               </div>
-              <Image src={SidePanelImage3} alt='' width={400} height={600} className='z-10' />
+              <Image src={SidePanelImage3} alt='' width={400} height={700} className='z-10' />
               <p className='text-gold xs:text-xl xs:ml-2 xs:my-6 uppercase'>
                 Venue Details Section within Side Panel where the user can find out more info about the venue while staying on the map page
               </p>
-              <Image src={SidePanelImage2} alt='' width={400} height={250} className='z-10' />
+              <Image src={SidePanelImage2} alt='' width={400} height={700} className='z-10' />
 
               {/* Feature 3 */}
               <div className='flex font-code z-10 xs:mt-6 xs:w-100% xs:h-28 bg-lightBlack xs:border-gold xs:border-y-2'>
