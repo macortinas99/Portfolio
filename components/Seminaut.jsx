@@ -8,7 +8,9 @@ import GuildMap1 from '../assets/img/GuildGaming/MapMultiplePins.PNG'
 import AutoFillImage from '../assets/img/GuildGaming/AutoFillImage.PNG'
 import SidePanelImage1 from '../assets/img/GuildGaming/SidePanelImg1.PNG'
 import SidePanelImage2 from '../assets/img/GuildGaming/SidePanelImg2.PNG'
+import SidePanelImage3 from '../assets/img/GuildGaming/SidePanelImg3.PNG'
 import AutocompleteBar from '../assets/img/GuildGaming/AutocompleteSearchBar.PNG'
+import MapSnippet1 from '../assets/img/GuildGaming/MapSnippet1.PNG'
 
 import { useState, useEffect } from 'react'
 
@@ -63,29 +65,46 @@ export default function Seminaut() {
             </p>
             <div>
               {/* Feature 1 */}
-              <div className='flex font-code xs:mt-6 xs:w-90% mx-auto'>
-                <span className='text-teal xs:text-4xl'>01.</span>
-                <span className='text-gold xs:text-md xs:ml-2 xs:mb-4'>Auto populating live map with events and venues</span>
+              <div className='flex font-code z-10 xs:mt-6 xs:w-100% xs:h-28 bg-lightBlack xs:border-gold xs:border-y-2'>
+                <div className='xs:w-90% xs:mx-auto xs:flex'>
+                  <span className='text-teal xs:text-4xl xs:my-auto'>01.</span>
+                  <span className='text-gold xs:text-xl xs:ml-2 xs:my-auto uppercase'>Auto populating live map with events and venues</span>
+                </div>
               </div>
               <Image src={AutoFillImage} alt='' width={400} height={250} className='z-10' />
 
               {/* Feature 2 */}
-              <div className='flex font-code xs:mt-6 xs:w-90% mx-auto'>
-                <span className='text-teal xs:text-4xl'>02.</span>
-                <span className='text-gold xs:text-md xs:ml-2 xs:mb-4'>Side Panel feature allowing more friendly UX/UI experience</span>
+              <div className='flex font-code z-10 xs:mt-6 xs:w-100% xs:h-28 bg-lightBlack xs:border-gold xs:border-y-2'>
+                <div className='xs:w-90% xs:mx-auto xs:flex'>
+                  <span className='text-teal xs:text-4xl xs:my-auto'>02.</span>
+                  <span className='text-gold xs:text-xl xs:ml-2 xs:my-auto uppercase'>
+                    Side Panel feature allowing more friendly UX/UI experience
+                  </span>
+                </div>
               </div>
-              <Image src={SidePanelImage1} alt='' width={400} height={250} className='z-10' />
-              <p className='text-gold font-code xs:w-90% mx-auto xs:mb-4'>
+              <Image src={SidePanelImage3} alt='' width={400} height={600} className='z-10' />
+              <p className='text-gold xs:text-xl xs:ml-2 xs:my-6 uppercase'>
                 Venue Details Section within Side Panel where the user can find out more info about the venue while staying on the map page
               </p>
               <Image src={SidePanelImage2} alt='' width={400} height={250} className='z-10' />
 
               {/* Feature 3 */}
-              <div className='flex font-code xs:mt-6 xs:w-90% mx-auto'>
-                <span className='text-teal xs:text-4xl'>03.</span>
-                <span className='text-gold xs:text-md xs:ml-2 xs:mb-4'>Autocomplete search bar for location searching</span>
+              <div className='flex font-code z-10 xs:mt-6 xs:w-100% xs:h-28 bg-lightBlack xs:border-gold xs:border-y-2'>
+                <div className='xs:w-90% xs:mx-auto xs:flex'>
+                  <span className='text-teal xs:text-4xl xs:my-auto'>03.</span>
+                  <span className='text-gold xs:text-xl xs:ml-2 xs:my-auto uppercase'>Autocomplete search bar for location searching</span>
+                </div>
               </div>
               <Image src={AutocompleteBar} alt='' width={400} height={300} className='z-10' />
+
+              {/* Feature 4 */}
+              <div className='flex font-code z-10 xs:mt-6 xs:w-100% xs:h-28 bg-lightBlack xs:border-gold xs:border-y-2'>
+                <div className='xs:w-90% xs:mx-auto xs:flex'>
+                  <span className='text-teal xs:text-4xl xs:my-auto'>04.</span>
+                  <span className='text-gold xs:text-xl xs:ml-2 xs:my-auto uppercase'>Live Map Snippets on Event/Venue Detail Pages</span>
+                </div>
+              </div>
+              <Image src={MapSnippet1} alt='' width={400} height={300} className='z-10' />
             </div>
           </div>
         </div>
