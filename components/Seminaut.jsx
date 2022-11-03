@@ -71,6 +71,10 @@ export default function Seminaut() {
                   <span className='text-gold xs:text-xl xs:ml-2 xs:my-auto uppercase'>Auto populating live map with events and venues</span>
                 </div>
               </div>
+              <p className='xs:w-90% xs:mx-auto text-teal font-code xs:my-4'>
+                Using API calls to the backend, events and venues are the inserted on the map using Mapbox GL API creating a live interactive map like
+                Google Maps.
+              </p>
               <Image src={AutoFillImage} alt='' width={400} height={250} className='z-10' />
 
               {/* Feature 2 */}
@@ -82,10 +86,14 @@ export default function Seminaut() {
                   </span>
                 </div>
               </div>
-              <Image src={SidePanelImage3} alt='' width={400} height={700} className='z-10' />
-              <p className='text-gold xs:text-xl xs:ml-2 xs:my-6 uppercase'>
-                Venue Details Section within Side Panel where the user can find out more info about the venue while staying on the map page
+              <p className='xs:w-90% xs:mx-auto text-teal font-code xs:my-4'>
+                The side panel is filled with event's/venues that the user can scroll through. If a card is clicked on it will re-center the map. The
+                side panel gives the user the ability to use a lot of the sites function within the map page. The user can register for an event,
+                share an event and visit the event details page. If a venue icon or card is clicked on it will show the details of that venue within
+                the side panel.
               </p>
+              <Image src={SidePanelImage3} alt='' width={400} height={700} className='z-10' />
+
               <Image src={SidePanelImage2} alt='' width={400} height={700} className='z-10' />
 
               {/* Feature 3 */}
@@ -95,6 +103,10 @@ export default function Seminaut() {
                   <span className='text-gold xs:text-xl xs:ml-2 xs:my-auto uppercase'>Autocomplete search bar for location searching</span>
                 </div>
               </div>
+              <p className='xs:w-90% xs:mx-auto text-teal font-code xs:my-4'>
+                Using Mapbox GL API I implemented a autocomplete location search bar. Using this search bar users can locate venues and event's in
+                popular cities easier.
+              </p>
               <Image src={AutocompleteBar} alt='' width={400} height={300} className='z-10' />
 
               {/* Feature 4 */}
@@ -104,6 +116,9 @@ export default function Seminaut() {
                   <span className='text-gold xs:text-xl xs:ml-2 xs:my-auto uppercase'>Live Map Snippets on Event/Venue Detail Pages</span>
                 </div>
               </div>
+              <p className='xs:w-90% xs:mx-auto text-teal font-code xs:my-4'>
+                I embedded live maps using Mapbox GL API within the event/venue detail pages as small snippets.
+              </p>
               <Image src={MapSnippet1} alt='' width={400} height={300} className='z-10' />
             </div>
           </div>

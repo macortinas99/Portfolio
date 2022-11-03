@@ -9,7 +9,8 @@ html {
     background-color: #14213d;
 }
 
-.scanner {
+@media only screen and (min-width:574px) {
+  .scanner {
     visibility: hidden;
 }
 .barcode-scanner:hover .scanner{
@@ -42,6 +43,7 @@ html {
       top: 100%;
     }
   }
+}
 
 .projects {
     transition: all 1.5s ease;

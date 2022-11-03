@@ -12,16 +12,18 @@ export const StateContextProvider = ({ children }) => {
     github: 'https://github.com/macortinas99/ecommerce_sanity_stripe_template',
     website: 'https://ecommerce-sanity-stripe-template.vercel.app/',
     id: 1,
-    skills: ['Next.js/React.js', 'Sanity Database', 'Stripe payment integration', 'Shopping Cart Functionality', 'Full Stack Website'],
+    skills: ['Next.js/React.js', 'Sanity Database', 'Stripe payment integration', 'Shopping Cart Functionality', 'Full Stack Website', 'REST API'],
   })
   const [project2, setProject2] = useState({
     title: 'Recipe Website',
     description:
-      'Recipe app that provides random recipes, filtering by category, and searching capabilities. Data is retrieved via API request and client rendered using React.js.',
-    image: ['/E-commerce-sample.png'],
+      'Recipe app that provides random recipes, filtering by category, and searching capabilities. Data is retrieved via Spoonacular API request and client rendered using React.js.',
+    image: ['/RecipeAppImages/RecipeAppImg1.PNG', '/RecipeAppImages/RecipeAppImg2.PNG', '/RecipeAppImages/RecipeAppImg3.PNG'],
+    video: '/RecipeAppImages/RecipeVideo.mp4',
     github: 'https://github.com/macortinas99/React_Recipe_app',
     website: 'https://macortinas99.github.io/React_Recipe_app/',
     id: 2,
+    skills: ['React.js', 'Styled Components', 'Search/Filter recipe functionality', 'REST API'],
   })
   const [project3, setProject3] = useState({
     title: 'Long Project Title Example ... hilksdf ',

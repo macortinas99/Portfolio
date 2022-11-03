@@ -13,8 +13,8 @@ import StateContext from '../context/StateContext'
 import Seminaut from '../components/Seminaut'
 
 export default function Home() {
-  const { project1, project2, project3 } = useContext(StateContext)
-  const projects = { project1, project2, project3 }
+  const { project1, project2 } = useContext(StateContext)
+  const projects = { project1, project2 }
 
   const scrollEffect = () => {
     // Screens larger than 600px wide*******************************
