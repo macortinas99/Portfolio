@@ -12,12 +12,11 @@ const Header = () => {
     } else {
       setIsMobile(false)
     }
-    console.log(isMobile)
   }, [])
 
   const toggleHamburgerMenu = () => {
     let navbarContainer = document.getElementById('navbar-container')
-    let overlay = document.getElementById('body')
+    // let overlay = document.getElementById('body')
 
     if (!isActive) {
       // navbarContainer.style.left = '75px'

@@ -24,31 +24,50 @@ export default function Seminaut() {
   // lg view port
   const [isDesktop, setIsDesktop] = useState()
   useEffect(() => {
-    if (screen.width <= 574) {
+    const handleWindowSizeChange = () => {
+      let count = 0
+      count = count + 1
+      if (window.innerWidth <= 574) {
+        setIsMobile(true)
+        setIsTablet(false)
+        setIsLaptop(false)
+        setIsDesktop(false)
+      }
+      if (window.innerWidth >= 575 && window.innerWidth <= 897) {
+        setIsTablet(true)
+        setIsMobile(false)
+        setIsLaptop(false)
+        setIsDesktop(false)
+      }
+      if (window.innerWidth >= 898 && window.innerWidth <= 1199) {
+        setIsLaptop(true)
+        setIsTablet(false)
+        setIsMobile(false)
+        setIsDesktop(false)
+      }
+      if (window.innerWidth >= 1200) {
+        setIsDesktop(true)
+        setIsMobile(false)
+        setIsTablet(false)
+        setIsLaptop(false)
+      }
+    }
+    if (window.innerWidth <= 574) {
       setIsMobile(true)
-      setIsTablet(false)
-      setIsLaptop(false)
-      setIsDesktop(false)
     }
-    if (screen.width >= 575 && screen.width <= 897) {
+    if (window.innerWidth >= 575 && window.innerWidth <= 897) {
       setIsTablet(true)
-      setIsMobile(false)
-      setIsLaptop(false)
-      setIsDesktop(false)
     }
-    if (screen.width >= 898 && screen.width <= 1199) {
+    if (window.innerWidth >= 898 && window.innerWidth <= 1199) {
       setIsLaptop(true)
-      setIsTablet(false)
-      setIsMobile(false)
-      setIsDesktop(false)
     }
-    if (screen.width >= 1200) {
+    if (window.innerWidth >= 1200) {
       setIsDesktop(true)
-      setIsMobile(false)
-      setIsTablet(false)
-      setIsLaptop(false)
     }
-  }, [])
+
+    window.addEventListener('resize', handleWindowSizeChange)
+    return () => window.removeEventListener('resize', handleWindowSizeChange)
+  }, [isMobile, isTablet, isLaptop, isDesktop])
   return (
     <div>
       <div>
@@ -61,7 +80,7 @@ export default function Seminaut() {
         <Image src={GuildGoldLogo} alt='' id='Guild-logo-img' className='z-10' />
       </div>
       <div>
-        <div className='xs:w-90% sm:w-90% md:w-80% xs:mx-auto sm:mx-auto md:mx-auto sm:my-6'>
+        <div className='xs:w-90% sm:w-90% md:w-80% lg:w-60% mx-auto sm:my-6'>
           <p className='text-gold font-bold font-code xs:text-2xl sm:text-3xl md:text-4xl xs:my-2 sm:my-4 md:my-6'>About Guild Gaming</p>
           <p className='text-gold font-code xs:text-sm sm:text-md md:text-lg xs:mb-2 sm:mb-4 md:mb-8'>
             Guild Gaming is a subsidiary of Seminaut Inc. Here at The Guild, users can find connect with other local players in the area. Gaming
@@ -84,8 +103,8 @@ export default function Seminaut() {
           </p>
         </div>
         <div className='xs:mt-6'>
-          <div className='flex xs:w-90% sm:w-90% md:w-90% xs:mx-auto sm:mx-auto sm:justify-center md:mx-auto sm:my-8'>
-            <p className='text-gold font-code font-bold xs:text-3xl sm:text-4xl md:text-5xl xs:w-60% sm:w-50% md:w-60% xs:my-2 sm:my-12 md:my-16'>
+          <div className='flex xs:w-90% sm:w-90% md:w-80% xs:mx-auto sm:mx-auto sm:justify-center md:mx-auto sm:my-8'>
+            <p className='text-gold font-code font-bold xs:text-3xl sm:text-4xl md:text-6xl xs:w-60% sm:w-50% md:w-80% xs:my-2 sm:my-12 md:my-16'>
               Acheiving our first 100 users!
             </p>
             {isMobile && <Image src={GuildLogoBadge} alt='' height={150} width={150} className='z-10' />}
@@ -95,117 +114,159 @@ export default function Seminaut() {
               </div>
             )}
             {isLaptop && (
-              <div className='md:w-40% md:h-48 md:flex md:justify-center'>
+              <div className='md:w-30% md:h-48 md:mt-10 md:flex md:justify-center'>
                 <Image src={GuildLogoBadge} alt='' className='z-10' objectFit='contain' />
               </div>
             )}
           </div>
           <div className='w-100% mx-auto'>
-            <p className='text-gold font-code xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:mt-8 sm:my-8 xs:text-sm sm:text-md'>
-              By adding some key features I was able to help The Guild achieve it's first 100 users and help get it's first 10 venues registered on
+            <p className='text-gold font-code xs:w-90% sm:w-90% md:w-80% mx-auto xs:mt-8 sm:my-8 md:my-14 xs:text-sm sm:text-md md:text-lg'>
+              By adding these key features I was able to help The Guild achieve it's first 100 users and help get it's first 10 venues registered on
               the website!
             </p>
             <div>
               {/* Feature 1 */}
-              <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4'>
-                <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex'>
-                  <span className='text-teal xs:text-4xl sm:text-6xl xs:my-auto sm:my-auto'>01.</span>
-                  <span className='text-gold xs:text-xl sm:text-3xl xs:ml-2 xs:my-auto sm:my-auto uppercase'>
-                    Auto populating live map with events and venues
-                  </span>
+              <div className='md:flex md:w-90% md:gap-6 md:mx-auto'>
+                <div className='md:w-100%'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-90% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4'>
+                    <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex md:flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl xs:my-auto sm:my-auto md:my-auto'>01.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl xs:ml-2 xs:my-auto sm:my-auto md:my-auto uppercase'>
+                        Auto populating live map with events and venues
+                      </span>
+                    </div>
+                  </div>
+                  <p className='xs:w-90% sm:w-90% md:w-90% xs:mx-auto sm:mx-auto md:mt-8 text-teal xs:text-md sm:text-lg md:text-xl font-code xs:my-4 sm:my-6'>
+                    Using API calls to the backend, events and venues are the inserted on the map using Mapbox GL API creating a live interactive map
+                    like Google Maps.
+                  </p>
                 </div>
-              </div>
-              <p className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto text-teal xs:text-md sm:text-lg font-code xs:my-4 sm:my-6'>
-                Using API calls to the backend, events and venues are the inserted on the map using Mapbox GL API creating a live interactive map like
-                Google Maps.
-              </p>
-              {isMobile && <Image src={AutoFillImage} alt='' width={600} height={450} className='z-10' />}
-              {isTablet && (
-                <div>
-                  <Image src={AutoFillImage} alt='' objectFit='contain' className='z-10' />
-                </div>
-              )}
-
-              {/* Feature 2 */}
-              <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4'>
-                <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex'>
-                  <span className='text-teal xs:text-4xl sm:text-6xl xs:my-auto sm:my-auto'>02.</span>
-                  <span className='text-gold xs:text-xl sm:text-3xl xs:ml-2 xs:my-auto sm:my-auto uppercase'>
-                    Side Panel feature allowing more friendly UX/UI experience
-                  </span>
-                </div>
-              </div>
-              <p className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto text-teal xs:text-md sm:text-lg font-code xs:my-4 sm:my-6'>
-                The side panel is filled with event's/venues that the user can scroll through. If a card is clicked on it will re-center the map. The
-                side panel gives the user the ability to use a lot of the sites function within the map page. The user can register for an event,
-                share an event and visit the event details page. If a venue icon or card is clicked on it will show the details of that venue within
-                the side panel.
-              </p>
-              <div className='xs:flex xs:flex-col xs:gap-y-6 '>
-                {isMobile && (
+                {isMobile && <Image src={AutoFillImage} alt='' width={600} height={450} className='z-10' />}
+                {isTablet && (
                   <div>
-                    <Image src={SidePanelImage3} alt='' width={400} height={700} className='z-10' objectFit='contain' />
-                    <Image src={SidePanelImage2} alt='' width={400} height={700} className='z-10' />
+                    <Image src={AutoFillImage} alt='' objectFit='contain' className='z-10' />
                   </div>
                 )}
-                {isTablet && (
-                  <div className='sm:w-100%'>
-                    <div className='sm:flex sm:justify-center'>
+                {isLaptop && (
+                  <div className='md:w-90% md:mt-16'>
+                    <Image src={AutoFillImage} alt='' objectFit='contain' className='z-10' />
+                  </div>
+                )}
+              </div>
+
+              {/* Feature 2 */}
+
+              <div className='md:flex md:w-90% md:gap-6 md:mx-auto md:my-24'>
+                {isLaptop && (
+                  <div className='md:w-100% md:flex md:mt-32'>
+                    <div className=''>
                       <Image src={SidePanelImage3} alt='' className='z-10' objectFit='contain' />
                     </div>
-                    <div className='sm:flex sm:justify-center'>
+                    <div className=''>
                       <Image src={SidePanelImage2} alt='' className='z-10' objectFit='contain' />
                     </div>
                   </div>
                 )}
+                <div className='md:w-100%'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4'>
+                    <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex md:flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl xs:my-auto sm:my-auto md:my-auto'>02.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl xs:ml-2 xs:my-auto sm:my-auto md:my-auto uppercase'>
+                        Side Panel feature allowing more friendly UX/UI experience
+                      </span>
+                    </div>
+                  </div>
+                  <p className='xs:w-90% sm:w-90% md:w-100% xs:mx-auto sm:mx-auto md:mt-8 text-teal xs:text-md sm:text-lg md:text-xl font-code xs:my-4 sm:my-6'>
+                    The side panel is filled with event's/venues that the user can scroll through. If a card is clicked on it will re-center the map.
+                    The side panel gives the user the ability to use a lot of the sites function within the map page. The user can register for an
+                    event, share an event and visit the event details page. If a venue icon or card is clicked on it will show the details of that
+                    venue within the side panel.
+                  </p>
+                </div>
+                <div className='xs:flex xs:flex-col xs:gap-y-6 '>
+                  {isMobile && (
+                    <div>
+                      <Image src={SidePanelImage3} alt='' width={400} height={700} className='z-10' objectFit='contain' />
+                      <Image src={SidePanelImage2} alt='' width={400} height={700} className='z-10' />
+                    </div>
+                  )}
+                  {isTablet && (
+                    <div className='sm:w-100%'>
+                      <div className='sm:flex sm:justify-center'>
+                        <Image src={SidePanelImage3} alt='' className='z-10' objectFit='contain' />
+                      </div>
+                      <div className='sm:flex sm:justify-center'>
+                        <Image src={SidePanelImage2} alt='' className='z-10' objectFit='contain' />
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Feature 3 */}
-              <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4'>
-                <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex'>
-                  <span className='text-teal xs:text-4xl sm:text-6xl xs:my-auto sm:my-auto'>03.</span>
-                  <span className='text-gold xs:text-xl sm:text-3xl xs:ml-2 xs:my-auto sm:my-auto uppercase'>
-                    Autocomplete search bar for location searching
-                  </span>
+              <div className='md:flex md:w-90% md:gap-6 md:mx-auto'>
+                <div className='md:w-100%'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-90% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4'>
+                    <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex md:flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl xs:my-auto sm:my-auto md:my-auto'>03.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl xs:ml-2 xs:my-auto sm:my-auto md:my-auto uppercase'>
+                        Autocomplete search bar for location searching
+                      </span>
+                    </div>
+                  </div>
+                  <p className='xs:w-90% sm:w-90% md:w-90% xs:mx-auto sm:mx-auto md:mt-8 text-teal xs:text-md sm:text-lg md:text-xl font-code xs:my-4 sm:my-6'>
+                    Using Mapbox GL API I implemented a autocomplete location search bar. Using this search bar users can locate venues and event's in
+                    popular cities easier.
+                  </p>
                 </div>
+                {isMobile && (
+                  <div className='md:w-90% md:mt-16'>
+                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  </div>
+                )}
+                {isTablet && (
+                  <div className='sm:flex sm:justify-center '>
+                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  </div>
+                )}
+                {isLaptop && (
+                  <div className='md:w-90% md:mt-16'>
+                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  </div>
+                )}
               </div>
-              <p className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto text-teal xs:text-md sm:text-lg font-code xs:my-4 sm:my-6'>
-                Using Mapbox GL API I implemented a autocomplete location search bar. Using this search bar users can locate venues and event's in
-                popular cities easier.
-              </p>
-              {isMobile && (
-                <div className='xs:w-100% xs:mx-auto '>
-                  <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
-                </div>
-              )}
-              {isTablet && (
-                <div className='sm:flex sm:justify-center '>
-                  <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
-                </div>
-              )}
 
               {/* Feature 4 */}
-              <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4'>
-                <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex'>
-                  <span className='text-teal xs:text-4xl sm:text-6xl xs:my-auto sm:my-auto'>04.</span>
-                  <span className='text-gold xs:text-xl sm:text-3xl xs:ml-2 xs:my-auto sm:my-auto uppercase'>
-                    Live Map Snippets on Event/Venue Detail Pages
-                  </span>
+              <div className='md:flex md:w-90% md:gap-6 md:mx-auto md:my-24'>
+                {isLaptop && (
+                  <div className='md:w-100% md:flex md:mt-10'>
+                    <Image src={MapSnippet1} alt='' className='z-10' objectFit='contain' />
+                  </div>
+                )}
+                <div className='md:w-100%'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4'>
+                    <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex md:flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl xs:my-auto sm:my-auto md:my-auto'>04.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl xs:ml-2 xs:my-auto sm:my-auto md:my-auto uppercase'>
+                        Live Map Snippets on Event/Venue Detail Pages
+                      </span>
+                    </div>
+                  </div>
+                  <p className='xs:w-90% sm:w-90% md:w-100% xs:mx-auto sm:mx-auto md:mt-8 text-teal xs:text-md sm:text-lg md:text-xl font-code xs:my-4 sm:my-6'>
+                    I embedded live maps using Mapbox GL API within the event/venue detail pages as small snippets.
+                  </p>
                 </div>
+                {isMobile && (
+                  <div className='w-100%'>
+                    <Image src={MapSnippet1} alt='' width={600} height={500} className='z-10' />
+                  </div>
+                )}
+                {isTablet && (
+                  <div className='sm:flex sm:justify-center'>
+                    <Image src={MapSnippet1} alt='' className='z-10' objectFit='contain' />
+                  </div>
+                )}
               </div>
-              <p className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto text-teal xs:text-md sm:text-lg font-code xs:my-4 sm:my-6'>
-                I embedded live maps using Mapbox GL API within the event/venue detail pages as small snippets.
-              </p>
-              {isMobile && (
-                <div className='w-100%'>
-                  <Image src={MapSnippet1} alt='' width={600} height={500} className='z-10' />
-                </div>
-              )}
-              {isTablet && (
-                <div className='sm:flex sm:justify-center'>
-                  <Image src={MapSnippet1} alt='' className='z-10' objectFit='contain' />
-                </div>
-              )}
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ const ProjectCards = ({ projects }) => {
         return (
           <div
             key={project.id}
-            className='hover:border-teal hover:border-4 mx-auto z-10 xs:h-72 sm:h-72 md:h-96 lg:h-96 xs:mt-6 mt-12 xs:w-90% sm:w-70% md:w-80% lg:w-4/5 xs:mx-auto border-2 border-gold rounded-md xs:p-3 md:p-3 lg:p-5 bg-lightBlack'
+            className='hover:border-teal hover:border-4 mx-auto z-10 xs:h-72 sm:h-72 md:h-96 lg:h-96 xs:mt-6 mt-12 xs:w-90% sm:w-70% md:w-80% lg:w-4/5 xs:mx-auto border-2 border-gold rounded-md xs:p-3 sm:p-3 md:p-3 lg:p-5 bg-lightBlack'
           >
             <Link key={project.id} href={`/project/${project.id}`}>
               <div>
