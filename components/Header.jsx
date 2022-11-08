@@ -38,8 +38,9 @@ const Header = () => {
   return (
     <div className='font-barcode xs:text-3xl sm:text-3xl text-4xl z-20 top-0 w-screen xs:h-14 h-20 fixed bg-navyBlue'>
       <div className='flex text-gold '>
-        <p className='font-logo mt-5 ml-5 animate-pulse xs:text-xl'>MAC</p>
-
+        <Link href='/'>
+          <p className='font-logo mt-5 ml-5 animate-pulse xs:text-xl'>MAC</p>
+        </Link>
         <div
           id='navbar-container'
           className='transition-all xs:z-40 flex xs:text-0 xs:text-3xl sm:text-3xl text-4xl xs:right-0 right-6 lg:mr-10 xs:mt-0 mt-6 xs:space-x-0 space-x-5 xs:bg-black xs:w-0 xs:h-screen h-24 fixed'
