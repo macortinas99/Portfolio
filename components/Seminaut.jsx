@@ -81,8 +81,10 @@ export default function Seminaut() {
       </div>
       <div>
         <div className='xs:w-90% sm:w-90% md:w-80% lg:w-60% mx-auto sm:my-6'>
-          <p className='text-gold font-bold font-code xs:text-2xl sm:text-3xl md:text-4xl xs:my-2 sm:my-4 md:my-6'>About Guild Gaming</p>
-          <p className='text-gold font-code xs:text-sm sm:text-md md:text-lg xs:mb-2 sm:mb-4 md:mb-8'>
+          <p className='text-gold font-bold font-code xs:text-2xl sm:text-3xl md:text-4xl lg:text-6xl xs:my-2 sm:my-4 md:my-6 lg:my-24'>
+            About Guild Gaming
+          </p>
+          <p className='text-gold font-code xs:text-sm sm:text-md md:text-lg lg:text-2xl xs:mb-2 sm:mb-4 md:mb-8 lg:mb-24'>
             Guild Gaming is a subsidiary of Seminaut Inc. Here at The Guild, users can find connect with other local players in the area. Gaming
             venues and events are registered on The Guild and the website serves as a community driven website where people can come together and do
             what they love!
@@ -94,18 +96,30 @@ export default function Seminaut() {
             <Image src={GuildMap1} alt='' className='z-10' objectFit='contain' />
           </div>
         )}
+        {isLaptop && (
+          <div className='sm:w-80% sm:h-96 sm:mx-auto'>
+            <Image src={GuildMap1} alt='' className='z-10' objectFit='contain' />
+          </div>
+        )}
+        {isDesktop && (
+          <div className='lg:w-60% lg:mx-auto'>
+            <Image src={GuildMap1} alt='' className='z-10' objectFit='contain' />
+          </div>
+        )}
 
-        <div className='xs:w-90% sm:w-90% md:w-80% xs:mx-auto sm:mx-auto md:mx-auto'>
-          <p className='text-gold font-bold font-code xs:text-2xl sm:text-3xl md:text-4xl xs:my-2 sm:my-4 md:my-6'>The Map Team</p>
-          <p className='text-gold font-code xs:text-sm sm:text-md md:text-lg'>
+        <div className='xs:w-90% sm:w-90% md:w-80% lg:w-60% mx-auto'>
+          <p className='text-gold font-bold font-code xs:text-2xl sm:text-3xl md:text-4xl lg:text-6xl xs:my-2 sm:my-4 md:my-6 lg:my-16'>
+            The Map Team
+          </p>
+          <p className='text-gold font-code xs:text-sm sm:text-md md:text-lg lg:text-xl'>
             My primary contributions towards The guild are within the live map page. I was given more responsibility and chosen to lead the Map Team
             with my own team of 6 interns. I was also promoted to a senior frontend developer.
           </p>
         </div>
         <div className='xs:mt-6'>
-          <div className='flex xs:w-90% sm:w-90% md:w-80% xs:mx-auto sm:mx-auto sm:justify-center md:mx-auto sm:my-8'>
-            <p className='text-gold font-code font-bold xs:text-3xl sm:text-4xl md:text-6xl xs:w-60% sm:w-50% md:w-80% xs:my-2 sm:my-12 md:my-16'>
-              Acheiving our first 100 users!
+          <div className='flex xs:w-90% sm:w-90% md:w-80% lg:w-60% xs:mx-auto sm:justify-center md:mx-auto lg:mx-auto sm:my-8 lg:my-24'>
+            <p className='text-gold font-code font-bold xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl xs:w-60% sm:w-50% md:w-80% lg:w-100% xs:my-2 sm:my-12 md:my-16'>
+              Acheiving our first 100 users and 10 venues!
             </p>
             {isMobile && <Image src={GuildLogoBadge} alt='' height={150} width={150} className='z-10' />}
             {isTablet && (
@@ -118,25 +132,29 @@ export default function Seminaut() {
                 <Image src={GuildLogoBadge} alt='' className='z-10' objectFit='contain' />
               </div>
             )}
+            {isDesktop && (
+              <div className='lg:w-30% lg:h-48 lg:mt-10 lg:flex lg:justify-center'>
+                <Image src={GuildLogoBadge} alt='' className='z-10' width={200} height={200} />
+              </div>
+            )}
           </div>
           <div className='w-100% mx-auto'>
-            <p className='text-gold font-code xs:w-90% sm:w-90% md:w-80% mx-auto xs:mt-8 sm:my-8 md:my-14 xs:text-sm sm:text-md md:text-lg'>
-              By adding these key features I was able to help The Guild achieve it's first 100 users and help get it's first 10 venues registered on
-              the website!
+            <p className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-24 mb-24 flex justify-center'>
+              Key Features
             </p>
             <div>
               {/* Feature 1 */}
-              <div className='md:flex md:w-90% md:gap-6 md:mx-auto'>
-                <div className='md:w-100%'>
-                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-90% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4'>
-                    <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex md:flex'>
-                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl xs:my-auto sm:my-auto md:my-auto'>01.</span>
-                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl xs:ml-2 xs:my-auto sm:my-auto md:my-auto uppercase'>
+              <div className='md:flex lg:flex md:w-90% lg:w-70% md:gap-6 md:mx-auto lg:mx-auto'>
+                <div className='md:w-100% lg:w-100%'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 lg:mt-24 xs:w-100% sm:w-100% md:w-90% lg:w-70% xs:h-28 sm:h-48 md:h-48 lg:h-80 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4 lg:border-y-4'>
+                    <div className='w-90% mx-auto flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl lg:text-7xl my-auto'>01.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl lg:text-4xl xs:ml-2 my-auto uppercase'>
                         Auto populating live map with events and venues
                       </span>
                     </div>
                   </div>
-                  <p className='xs:w-90% sm:w-90% md:w-90% xs:mx-auto sm:mx-auto md:mt-8 text-teal xs:text-md sm:text-lg md:text-xl font-code xs:my-4 sm:my-6'>
+                  <p className='w-90% lg:w-70% xs:mx-auto sm:mx-auto md:mt-8 lg:mt-8 text-teal xs:text-md sm:text-lg md:text-xl lg:text-2xl font-code xs:my-4 sm:my-6'>
                     Using API calls to the backend, events and venues are the inserted on the map using Mapbox GL API creating a live interactive map
                     like Google Maps.
                   </p>
@@ -152,11 +170,16 @@ export default function Seminaut() {
                     <Image src={AutoFillImage} alt='' objectFit='contain' className='z-10' />
                   </div>
                 )}
+                {isDesktop && (
+                  <div className='lg:w-60% lg:mt-24'>
+                    <Image src={AutoFillImage} alt='' objectFit='contain' className='z-10' />
+                  </div>
+                )}
               </div>
 
               {/* Feature 2 */}
 
-              <div className='md:flex md:w-90% md:gap-6 md:mx-auto md:my-24'>
+              <div className='md:flex lg:flex md:w-90% lg:w-70% md:gap-6 md:mx-auto lg:mx-auto md:my-24 lg:my-48'>
                 {isLaptop && (
                   <div className='md:w-100% md:flex md:mt-32'>
                     <div className=''>
@@ -167,16 +190,26 @@ export default function Seminaut() {
                     </div>
                   </div>
                 )}
-                <div className='md:w-100%'>
-                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4'>
-                    <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex md:flex'>
-                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl xs:my-auto sm:my-auto md:my-auto'>02.</span>
-                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl xs:ml-2 xs:my-auto sm:my-auto md:my-auto uppercase'>
+                {isDesktop && (
+                  <div className='lg:w-100% lg:flex lg:mt-32'>
+                    <div className=''>
+                      <Image src={SidePanelImage3} alt='' className='z-10' objectFit='contain' />
+                    </div>
+                    <div className=''>
+                      <Image src={SidePanelImage2} alt='' className='z-10' objectFit='contain' />
+                    </div>
+                  </div>
+                )}
+                <div className='md:w-100% lg:w-100% lg:ml-24'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% lg:w-100% xs:h-28 sm:h-48 md:h-48 lg:h-80 bg-lightBlack border-gold xs:border-y-2 border-y-4 '>
+                    <div className='w-90% mx-auto flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl lg:text-7xl my-auto'>02.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl lg:text-4xl xs:ml-2 my-auto uppercase'>
                         Side Panel feature allowing more friendly UX/UI experience
                       </span>
                     </div>
                   </div>
-                  <p className='xs:w-90% sm:w-90% md:w-100% xs:mx-auto sm:mx-auto md:mt-8 text-teal xs:text-md sm:text-lg md:text-xl font-code xs:my-4 sm:my-6'>
+                  <p className='xs:w-90% sm:w-90% md:w-100% lg:w-100% xs:mx-auto sm:mx-auto md:mt-8 lg:mt-8 text-teal xs:text-md sm:text-lg md:text-xl lg:text-2xl font-code xs:my-4 sm:my-6'>
                     The side panel is filled with event's/venues that the user can scroll through. If a card is clicked on it will re-center the map.
                     The side panel gives the user the ability to use a lot of the sites function within the map page. The user can register for an
                     event, share an event and visit the event details page. If a venue icon or card is clicked on it will show the details of that
@@ -204,17 +237,17 @@ export default function Seminaut() {
               </div>
 
               {/* Feature 3 */}
-              <div className='md:flex md:w-90% md:gap-6 md:mx-auto'>
-                <div className='md:w-100%'>
-                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-90% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4'>
-                    <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex md:flex'>
-                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl xs:my-auto sm:my-auto md:my-auto'>03.</span>
-                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl xs:ml-2 xs:my-auto sm:my-auto md:my-auto uppercase'>
+              <div className='md:flex lg:flex md:w-90% lg:w-70% md:gap-6 md:mx-auto lg:mx-auto'>
+                <div className='md:w-100% lg:w-100%'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 lg:mt-24 xs:w-100% sm:w-100% md:w-90% lg:w-70% xs:h-28 sm:h-48 md:h-48 lg:h-80 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4 lg:border-y-4'>
+                    <div className='w-90% mx-auto flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl lg:text-7xl my-auto'>03.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl lg:text-4xl xs:ml-2 my-auto uppercase'>
                         Autocomplete search bar for location searching
                       </span>
                     </div>
                   </div>
-                  <p className='xs:w-90% sm:w-90% md:w-90% xs:mx-auto sm:mx-auto md:mt-8 text-teal xs:text-md sm:text-lg md:text-xl font-code xs:my-4 sm:my-6'>
+                  <p className='w-90% lg:w-70% xs:mx-auto sm:mx-auto md:mt-8 lg:mt-8 text-teal xs:text-md sm:text-lg md:text-xl lg:text-2xl font-code xs:my-4 sm:my-6'>
                     Using Mapbox GL API I implemented a autocomplete location search bar. Using this search bar users can locate venues and event's in
                     popular cities easier.
                   </p>
@@ -234,25 +267,35 @@ export default function Seminaut() {
                     <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
                   </div>
                 )}
+                {isDesktop && (
+                  <div className='lg:w-90% lg:mt-16'>
+                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  </div>
+                )}
               </div>
 
               {/* Feature 4 */}
-              <div className='md:flex md:w-90% md:gap-6 md:mx-auto md:my-24'>
+              <div className='md:flex lg:flex md:w-90% lg:w-70% md:gap-6 md:mx-auto lg:mx-auto md:my-24 lg:my-48'>
                 {isLaptop && (
                   <div className='md:w-100% md:flex md:mt-10'>
                     <Image src={MapSnippet1} alt='' className='z-10' objectFit='contain' />
                   </div>
                 )}
-                <div className='md:w-100%'>
-                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% xs:h-28 sm:h-48 md:h-48 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4'>
-                    <div className='xs:w-90% sm:w-90% xs:mx-auto sm:mx-auto xs:flex sm:flex md:flex'>
-                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl xs:my-auto sm:my-auto md:my-auto'>04.</span>
-                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl xs:ml-2 xs:my-auto sm:my-auto md:my-auto uppercase'>
+                {isDesktop && (
+                  <div className='lg:w-100% lg:flex'>
+                    <Image src={MapSnippet1} alt='' className='z-10' objectFit='contain' />
+                  </div>
+                )}
+                <div className='md:w-100% lg:w-100% lg:ml-24'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 xs:w-100% sm:w-100% md:w-100% lg:w-100% xs:h-28 sm:h-48 md:h-48 lg:h-80 bg-lightBlack border-gold xs:border-y-2 border-y-4'>
+                    <div className='w-90% mx-auto flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl lg:text-7xl my-auto'>04.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl lg:text-4xl xs:ml-2 my-auto uppercase'>
                         Live Map Snippets on Event/Venue Detail Pages
                       </span>
                     </div>
                   </div>
-                  <p className='xs:w-90% sm:w-90% md:w-100% xs:mx-auto sm:mx-auto md:mt-8 text-teal xs:text-md sm:text-lg md:text-xl font-code xs:my-4 sm:my-6'>
+                  <p className='xs:w-90% sm:w-90% md:w-100% lg:w-100% xs:mx-auto sm:mx-auto md:mt-8 lg:mt-8 text-teal xs:text-md sm:text-lg md:text-xl lg:text-2xl font-code xs:my-4 sm:my-6'>
                     I embedded live maps using Mapbox GL API within the event/venue detail pages as small snippets.
                   </p>
                 </div>
@@ -264,6 +307,44 @@ export default function Seminaut() {
                 {isTablet && (
                   <div className='sm:flex sm:justify-center'>
                     <Image src={MapSnippet1} alt='' className='z-10' objectFit='contain' />
+                  </div>
+                )}
+              </div>
+
+              {/* Feature 5 */}
+              <div className='md:flex lg:flex md:w-90% lg:w-70% md:gap-6 md:mx-auto lg:mx-auto'>
+                <div className='md:w-100% lg:w-100%'>
+                  <div className='flex font-code z-10 xs:mt-6 sm:mt-12 md:mt-16 lg:mt-24 xs:w-100% sm:w-100% md:w-90% lg:w-70% xs:h-28 sm:h-48 md:h-48 lg:h-80 bg-lightBlack border-gold xs:border-y-2 sm:border-y-4 md:border-y-4 lg:border-y-4'>
+                    <div className='w-90% mx-auto flex'>
+                      <span className='text-teal xs:text-4xl sm:text-6xl md:text-6xl lg:text-7xl my-auto'>05.</span>
+                      <span className='text-gold xs:text-xl sm:text-3xl md:text-3xl lg:text-4xl xs:ml-2 my-auto uppercase'>
+                        Animated Icons when event is Live
+                      </span>
+                    </div>
+                  </div>
+                  <p className='w-90% lg:w-70% xs:mx-auto sm:mx-auto md:mt-8 lg:mt-8 text-teal xs:text-md sm:text-lg md:text-xl lg:text-2xl font-code xs:my-4 sm:my-6'>
+                    Everytime an event is 30 minutes prior to starting and while the event is live, an animating pulse will be displayed over the icon
+                    showing that the event is currently happening. This animation will keep happening as long as the event is live.
+                  </p>
+                </div>
+                {isMobile && (
+                  <div className='md:w-90% md:mt-16'>
+                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  </div>
+                )}
+                {isTablet && (
+                  <div className='sm:flex sm:justify-center '>
+                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  </div>
+                )}
+                {isLaptop && (
+                  <div className='md:w-90% md:mt-16'>
+                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  </div>
+                )}
+                {isDesktop && (
+                  <div className='lg:w-90% lg:mt-16'>
+                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
                   </div>
                 )}
               </div>
