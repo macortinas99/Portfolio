@@ -11,6 +11,7 @@ import SidePanelImage2 from '../assets/img/GuildGaming/SidePanelImg2.PNG'
 import SidePanelImage3 from '../assets/img/GuildGaming/SidePanelImg3.PNG'
 import AutocompleteBar from '../assets/img/GuildGaming/AutocompleteSearchBar.PNG'
 import MapSnippet1 from '../assets/img/GuildGaming/MapSnippet1.PNG'
+// import LiveEventVideo from '../assets/img/GuildGaming/LiveEventAnimation.mp4'
 
 import { useState, useEffect } from 'react'
 
@@ -328,23 +329,23 @@ export default function Seminaut() {
                   </p>
                 </div>
                 {isMobile && (
-                  <div className='md:w-90% md:mt-16'>
-                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  <div className=' xs:w-100% xs:mt32 z-10'>
+                    <video src='/LiveEventAnimation.mp4' muted autoPlay loop />
                   </div>
                 )}
                 {isTablet && (
-                  <div className='sm:flex sm:justify-center '>
-                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  <div className=' sm:w-90% sm:mt32 sm:mx-auto z-10'>
+                    <video src='/LiveEventAnimation.mp4' muted autoPlay loop />
                   </div>
                 )}
                 {isLaptop && (
-                  <div className='md:w-90% md:mt-16'>
-                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  <div className=' md:w-100% md:mt-32 z-10'>
+                    <video src='/LiveEventAnimation.mp4' muted autoPlay loop />
                   </div>
                 )}
                 {isDesktop && (
-                  <div className='lg:w-90% lg:mt-16'>
-                    <Image src={AutocompleteBar} alt='' width={600} height={500} className='z-10' />
+                  <div className=' lg:w-80% lg:mt-40 z-10'>
+                    <video src='/LiveEventAnimation.mp4' muted autoPlay loop />
                   </div>
                 )}
               </div>
