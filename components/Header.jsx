@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 import { Link as Scroll } from 'react-scroll'
-import { useLocation } from 'react-router-dom'
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false)
