@@ -11,6 +11,7 @@ import Image from 'next/image'
 import StateContext from '../context/StateContext'
 
 import Seminaut from '../components/Seminaut'
+import AboutMe from '../components/AboutMe'
 
 export default function Home() {
   const { project1, project2 } = useContext(StateContext)
@@ -121,6 +122,8 @@ export default function Home() {
           <ProjectCards projects={projects} />
         </div>
       </div>
+
+      <AboutMe />
 
       <ContactMe />
       <Footer />

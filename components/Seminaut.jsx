@@ -118,7 +118,7 @@ export default function Seminaut() {
           </p>
         </div>
         <div className='xs:mt-6'>
-          <div className='flex xs:w-90% sm:w-90% md:w-80% lg:w-60% xs:mx-auto sm:justify-center md:mx-auto lg:mx-auto sm:my-8 lg:my-24'>
+          <div className='flex xs:w-90% sm:w-90% md:w-80% lg:w-60% xs:mx-auto sm:justify-center md:mx-auto lg:mx-auto sm:my-8 lg:my-96'>
             <p className='text-gold font-code font-bold xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl xs:w-60% sm:w-50% md:w-80% lg:w-100% xs:my-2 sm:my-12 md:my-16'>
               Acheiving our first 100 users and 10 venues!
             </p>
@@ -140,7 +140,10 @@ export default function Seminaut() {
             )}
           </div>
           <div className='w-100% mx-auto'>
-            <p className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-24 mb-24 flex justify-center'>
+            <p
+              className='projects-title text-6xl xs:text-5xl lg:text-7xl text-gold font-barcode xs:mt-40 mt-24 mb-24 flex justify-center'
+              id='key-features'
+            >
               Key Features
             </p>
             <div>

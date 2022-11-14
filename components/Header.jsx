@@ -3,6 +3,9 @@ import NavMenuIcon from '../assets/img/NavMenuIcon.svg'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
+import { Link as Scroll } from 'react-scroll'
+import { useLocation } from 'react-router-dom'
+
 const Header = () => {
   const [isActive, setIsActive] = useState(false)
   const [isMobile, setIsMobile] = useState()
@@ -35,6 +38,12 @@ const Header = () => {
     setIsActive(!isActive)
   }
 
+  const [path, setPath] = useState()
+  useEffect(() => {
+    setPath(window.location.pathname)
+    console.log(path)
+  }, [path])
+
   return (
     <div className='font-barcode xs:text-3xl sm:text-3xl text-4xl z-20 top-0 w-screen xs:h-14 h-20 fixed bg-navyBlue'>
       <div className='flex text-gold '>
@@ -52,12 +61,24 @@ const Header = () => {
                 <p>Home</p>
               </div>
             </Link>
-            <Link href='/About'>
-              <div className='barcode-scanner'>
-                <div className='scanner'></div>
-                <p>About</p>
-              </div>
-            </Link>
+
+            {path === '/' && screen.width < 574 && (
+              <Scroll to='about-me-container' spy={true} smooth={true} offset={-150}>
+                <div className='barcode-scanner' onClick={() => toggleHamburgerMenu()}>
+                  <div className='scanner'></div>
+                  <p>About</p>
+                </div>
+              </Scroll>
+            )}
+            {path === '/' && (
+              <Scroll to='about-me-container' spy={true} smooth={true} offset={-150}>
+                <div className='barcode-scanner'>
+                  <div className='scanner'></div>
+                  <p>About</p>
+                </div>
+              </Scroll>
+            )}
+
             <Link href='/Resume'>
               <div className='barcode-scanner'>
                 <div className='scanner'></div>
