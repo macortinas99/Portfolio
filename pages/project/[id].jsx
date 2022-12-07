@@ -30,7 +30,7 @@ export default function ProjectDetails() {
   }
 
   const { title, description, image, video, website, github, id, skills } = projectNum
-  console.log(skills)
+  console.log(video)
   return (
     <div>
       <Header />

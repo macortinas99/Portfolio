@@ -18,7 +18,7 @@ export const StateContextProvider = ({ children }) => {
       '/PizzaOrderingFullStack/pizzaApp8.PNG',
       '/PizzaOrderingFullStack/pizzaApp9.PNG',
     ],
-    video: '/PizzaOrderingFullStack/pizzaAppVideo1.mp4',
+    video: '/PizzaOrderingFullStack/PizzaAppVideo1.mp4',
     github: 'https://github.com/macortinas99/FullStackNextJsFoodOrderingApp',
     website: '',
     id: 1,
